@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indio Solari</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292929;
+            color: #333;
+            color: #ffffff;
+            /* Establecer texto blanco */
+            text-align: center;
+            /* Centrar todo el texto */
+        }
+
+        header {
+            background-color: #000;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        p {
+            color: #ffffff;
+            /* Asegurarse de que los textos sean blancos */
+        }
+
+        .titolCancion {
+            text-align: left;
+            margin-left: 18%;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* Modern audio player style */
+        .audio audio {
+            width: 70%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .audio audio::-webkit-media-controls-panel {
+            background-color: #727272;
+            border-radius: 10px;
+        }
+
+        .audio audio::-webkit-media-controls-play-button {
+            background-color: #7e2424;
+            border-radius: 10px;
+        }
+
+        .audio audio::-webkit-media-controls-volume-slider {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        /* Galería de imágenes */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 15px 0;
+            justify-items: center;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal for images */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .modal img {
+            max-width: 600px;
+            max-height: 80%;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .modal .controls {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .modal button {
+            background-color: #b11818;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .modal button:hover {
+            background-color: #640909;
+        }
+
+        /* Video styling */
+        .video video {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Indio Solari</h1>
+    </header>
+
+    <main>
+        <img src="imagen/IndioSolariPortada.jpg" alt="Imagen Indio Solari Portada" width="1000">
+        <h2>Qui és Indio Solari?</h2>
+        <p>Carlos Alberto Solari, més conegut com a "Indio Solari", és un dels artistes més llegendaris de l’escena
+            musical argentina. <br>Amb una carrera que va començar a principis dels anys 70 com a líder de la banda Patricio
+            Rey y sus Redonditos de Ricota, <br>Solari va revolucionar la música rock amb el seu estil únic i les seves
+            lletres profundes i poètiques. <br><br>Després de la separació de la banda, <br>va continuar la seva carrera en
+            solitari, on va consolidar-se com una icona indiscutible del rock nacional.<br><br> La seva influència es manté viva
+            a través de les seves cançons, que han marcat diverses generacions d'admiradors i seguidors.</p>
+
+
+
+            <br><br><br>
+        <h2>L'entrevista inèdita</h2>
+        <p>
+        <p>Una icona del rock que ha deixat un missatge etern a través de la seva música, i en aquest cas, a través de
+            les sevas paraules..</p>
+        <!-- Video Section -->
+        <section class="video">
+            <video controls width="800">
+                <source src="video/Indio_Solari_Frase.mp4" type="video/mp4">
+                <track src="subs/subtitlesCAT.vtt" kind="subtitles" srclang="ca" label="Català" default>
+                <track src="subs/subtitlesESP.vtt" kind="subtitles" srclang="es" label="Castellano">
+                El teu navegador no admet vídeo HTML5.
+            </video>
+        </section>
+
+        <br><br><br>
+        <h2>Música de Indio Solari</h2>
+        <p>Escolta alguns dels hits de l'Indio Solari.</p>
+        <br>
+        <!-- Audio Section -->
+        <section class="audio">
+            <p class="titolCancion">Pista 1: Todos a los botes</p>
+            <audio controls>
+                <source src="music/Todos a Los Botes - Indio Solari (Letra).mp3" type="audio/mpeg">
+                <source src="music/Todos-a-Los-Botes-Indio-Solari-_Letra_.ogg" type="audio/ogg">
+                El teu navegador no admet àudio HTML5.
+            </audio>
+
+            <p class="titolCancion">Pista 2: JIJIJI</p>
+            <audio controls>
+                <source src="music/Jijiji - Indio Solari Letra.mp3" type="audio/mpeg">
+                <source src="music/Jijiji-Indio-Solari-Letra.ogg" type="audio/ogg">
+                El teu navegador no admet àudio HTML5.
+            </audio>
+
+            <p class="titolCancion">Pista 3: Y mientras tanto el sol se muere</p>
+            <audio controls>
+                <source src="music/Y mentre tant el sol es mor (Porco Rex) - Indio Solari i LFDAA.mp3"
+                    type="audio/mpeg">
+                <source src="music/Y-mientras-tanto-el-sol-se-muere-_Porco-Rex_-Indio-Solari-y-LFDAA.ogg"
+                    type="audio/ogg">
+                El teu navegador no admet àudio HTML5.
+            </audio>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <br><br><br>
+        <h2>Galeria d'Imatges</h2>
+        <p>Una selecció d'imatges del cantant Indio Solari.</p>
+        <section class="galeria">
+            <img src="imagen/IndioSolari_8.jpg" alt="Imagen Indio Solari Concierto River Plate"
+                onclick="openModal(this, 0)">
+            <img src="imagen/IndioSolari_13.jpg" alt="Imagen Los Redonditos de Ricota" onclick="openModal(this, 1)">
+            <img src="imagen/IndioSolari_3.jpg" alt="Imagen Indio Solari Frase 3" onclick="openModal(this, 2)">
+            <img src="imagen/IndioSolari_7.jpg" alt="Imagen Indio Solari Frase 4" onclick="openModal(this, 3)">
+            <img src="imagen/IndioSolari_6.jpg" alt="Imagen Indio Solari Frase 5" onclick="openModal(this, 4)">
+            <img src="imagen/IndioSolari_4.jpg" alt="Imagen Indio Solari Frase 1" onclick="openModal(this, 5)">
+            <img src="imagen/IndioSolari_5.jpg" alt="Imagen Indio Solari Frase 2" onclick="openModal(this, 6)">
+            <img src="imagen/IndioSolari_10.jpg" alt="Imagen Indio Solari Frase 6" onclick="openModal(this, 7)">
+            <img src="imagen/IndioSolari_11.jpg" alt="Imagen Indio Solari Frase 7" onclick="openModal(this, 8)">
+            <img src="imagen/IndioSolari_2.jpg" alt="Imagen Indio Solari Frase 8" onclick="openModal(this, 9)">
+            <img src="imagen/IndioSolari_9.jpg" alt="Imagen Indio Solari Concierto Luna Park"
+                onclick="openModal(this, 10)">
+            <img src="imagen/IndioSolari_12.jpg" alt="Imagen El pogo del Indio Solari" onclick="openModal(this, 11)">
+        </section>
+
+        <br><br><br>
+        <!-- Modal for images -->
+        <div class="modal" id="modal">
+            <img id="modal-img">
+            <div class="controls">
+                <button onclick="zoomIn()">Augmentar</button>
+                <button onclick="zoomOut()">Reduir</button>
+                <button onclick="prevImage()">Anterior</button>
+                <button onclick="nextImage()">Següent</button>
+                <button onclick="closeModal()">Tancar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Indio Solari | Dev by Mateo Abraham | 2025</p>
+    </footer>
+
+    <script>
+        let scale = 1;
+        let currentIndex = 0;
+        let images = document.querySelectorAll('.galeria img');
+
+        function openModal(img, index) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            scale = 1;
+            currentIndex = index; // Store the current index
+            modalImg.style.transform = `scale(${scale})`;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function zoomIn() {
+            scale += 0.2;
+            document.getElementById("modal-img").style.transform = `scale(${scale})`;
+        }
+
+        function zoomOut() {
+            if (scale > 0.4) {
+                scale -= 0.2;
+                document.getElementById("modal-img").style.transform = `scale(${scale})`;
+            }
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            document.getElementById("modal-img").src = images[currentIndex].src;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            document.getElementById("modal-img").src = images[currentIndex].src;
+        }
+
+        // Audio autoplay functionality for the next track
+        const audioTracks = document.querySelectorAll('audio');
+        audioTracks.forEach((audio, index) => {
+            audio.addEventListener('ended', () => {
+                const nextTrack = audioTracks[index + 1] || audioTracks[0];
+                nextTrack.play();
+            });
+        });
+    </script>
+</body>
+
+</html>
